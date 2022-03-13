@@ -1,4 +1,4 @@
-Simple declarative command line interface specification via structs for go libraries. This was primarily developed as a tool for a proof-of-concept CLI generator (github.com/jnathanh/go-cli-generator).
+Simple declarative command line interface specification via structs for go libraries. This was primarily developed as a tool for a proof-of-concept CLI generator (github.com/jnathanh/go-generate-cli).
 
 It does not currently support CLI documentation. It pre-parses and validates command line arguments of type string, bool, int, and float. It supported order-dependent arguments and flags. It automatically outputs the handler's returned value to STDOUT.
 
