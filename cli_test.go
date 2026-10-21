@@ -8,6 +8,10 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+func run(spec cli.Spec, args ...string) error {
+	return cli.New(spec).ExecArgs(args)
+}
+
 func TestBoolFlagOmitted(t *testing.T) {
 	spec := cli.Spec{
 		Params: []cli.Value{
@@ -24,5 +28,5 @@ func TestBoolFlagOmitted(t *testing.T) {
 		},
 	}
 
-	require.NoError(t, cli.New(spec).ExecArgs([]string{""}))
+	require.NoError(t, run(spec, ""))
 }
